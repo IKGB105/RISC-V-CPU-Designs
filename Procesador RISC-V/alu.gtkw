@@ -1,0 +1,11 @@
+[dumpfile] "/home/tostada105/Proyects/Escuela/Amaranto/Procesador RISC-V/alu.vcd"
+[dumpfile_size] 1247
+[treeopen] top.
+@22
+bench.top.alu_operation[3:0]
+bench.top.a[31:0]
+bench.top.b[31:0]
+bench.top.result[31:0]
+bench.top.zero
+bench.top.lt
+bench.top.ltu

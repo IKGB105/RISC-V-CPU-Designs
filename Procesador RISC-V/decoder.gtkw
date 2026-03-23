@@ -1,0 +1,21 @@
+[dumpfile] "/home/tostada105/Proyects/Escuela/Amaranto/Procesador RISC-V/decoder.vcd"
+[dumpfile_size] 1421
+[treeopen] top.
+@22
+bench.top.instruction[31:0]
+bench.top.opcode[6:0]
+bench.top.rd[4:0]
+bench.top.funct3[2:0]
+bench.top.rs1[4:0]
+bench.top.rs2[4:0]
+bench.top.funct7[6:0]
+bench.top.alu_op[3:0]
+bench.top.reg_we
+bench.top.alu_src_imm
+bench.top.mem_re
+bench.top.mem_we
+bench.top.branch
+bench.top.jump
+bench.top.jalr
+bench.top.wb_sel[1:0]
+bench.top.imm_type[2:0]

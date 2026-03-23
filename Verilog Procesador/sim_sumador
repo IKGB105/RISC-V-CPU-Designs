@@ -1,0 +1,76 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)" "(v12_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x558a2c86d760 .scope module, "tb_sumador_basico" "tb_sumador_basico" 2 3;
+ .timescale -3 -9;
+v0x558a2c881360_0 .var "a", 7 0;
+v0x558a2c881440_0 .var "b", 7 0;
+v0x558a2c8814e0_0 .net "multiplicacion", 15 0, L_0x558a2c881d20;  1 drivers
+v0x558a2c8815e0_0 .net "suma", 8 0, L_0x558a2c881910;  1 drivers
+S_0x558a2c86d8f0 .scope module, "dut" "sumador_basico" 2 9, 3 1 0, S_0x558a2c86d760;
+ .timescale -3 -9;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 9 "suma";
+    .port_info 3 /OUTPUT 16 "multiplicacion";
+v0x558a2c85c130_0 .net *"_ivl_0", 8 0, L_0x558a2c8816b0;  1 drivers
+v0x558a2c880910_0 .net *"_ivl_10", 15 0, L_0x558a2c881b10;  1 drivers
+L_0x7fb0d0a4a0a8 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x558a2c8809f0_0 .net *"_ivl_13", 7 0, L_0x7fb0d0a4a0a8;  1 drivers
+v0x558a2c880ab0_0 .net *"_ivl_14", 15 0, L_0x558a2c881c30;  1 drivers
+L_0x7fb0d0a4a0f0 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x558a2c880b90_0 .net *"_ivl_17", 7 0, L_0x7fb0d0a4a0f0;  1 drivers
+L_0x7fb0d0a4a018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x558a2c880cc0_0 .net *"_ivl_3", 0 0, L_0x7fb0d0a4a018;  1 drivers
+v0x558a2c880da0_0 .net *"_ivl_4", 8 0, L_0x558a2c8817d0;  1 drivers
+L_0x7fb0d0a4a060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x558a2c880e80_0 .net *"_ivl_7", 0 0, L_0x7fb0d0a4a060;  1 drivers
+v0x558a2c880f60_0 .net "a", 7 0, v0x558a2c881360_0;  1 drivers
+v0x558a2c881040_0 .net "b", 7 0, v0x558a2c881440_0;  1 drivers
+v0x558a2c881120_0 .net "multiplicacion", 15 0, L_0x558a2c881d20;  alias, 1 drivers
+v0x558a2c881200_0 .net "suma", 8 0, L_0x558a2c881910;  alias, 1 drivers
+L_0x558a2c8816b0 .concat [ 8 1 0 0], v0x558a2c881360_0, L_0x7fb0d0a4a018;
+L_0x558a2c8817d0 .concat [ 8 1 0 0], v0x558a2c881440_0, L_0x7fb0d0a4a060;
+L_0x558a2c881910 .arith/sum 9, L_0x558a2c8816b0, L_0x558a2c8817d0;
+L_0x558a2c881b10 .concat [ 8 8 0 0], v0x558a2c881360_0, L_0x7fb0d0a4a0a8;
+L_0x558a2c881c30 .concat [ 8 8 0 0], v0x558a2c881440_0, L_0x7fb0d0a4a0f0;
+L_0x558a2c881d20 .arith/mult 16, L_0x558a2c881b10, L_0x558a2c881c30;
+    .scope S_0x558a2c86d760;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "sumador_basico.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x558a2c86d760 {0 0 0};
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x558a2c881360_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x558a2c881440_0, 0, 8;
+    %delay 10000000, 0;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v0x558a2c881360_0, 0, 8;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v0x558a2c881440_0, 0, 8;
+    %delay 10000000, 0;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v0x558a2c881360_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0x558a2c881440_0, 0, 8;
+    %delay 10000000, 0;
+    %pushi/vec4 100, 0, 8;
+    %store/vec4 v0x558a2c881360_0, 0, 8;
+    %pushi/vec4 50, 0, 8;
+    %store/vec4 v0x558a2c881440_0, 0, 8;
+    %delay 10000000, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_sumador_basico.v";
+    "sumador_basico.v";

@@ -1,0 +1,11 @@
+[dumpfile] "/home/tostada105/Proyects/Escuela/Amaranto/Procesador RISC-V/regfile.vcd"
+[dumpfile_size] 2274
+[treeopen] top.
+@22
+bench.top.rs1_address[4:0]
+bench.top.rs2_address[4:0]
+bench.top.rd_address[4:0]
+bench.top.rd_data[31:0]
+bench.top.rd_we
+bench.top.rs1_data[31:0]
+bench.top.rs2_data[31:0]
