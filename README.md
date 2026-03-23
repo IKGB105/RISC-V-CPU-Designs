@@ -166,14 +166,6 @@ each module has its own simulator:
 - the python version prioritizes clarity over performance
 - the verilog version is optimized for Xilinx Spartan-6 (adjust for your FPGA)
 - lots of comments explaining **why** not just **what**
-
-## contact
-
-if you're interested in CPU architecture, low-level optimization, or just debugging waveforms at midnight, let's chat.
-
-📧 [your.email@uaa.edu.mx](mailto:your.email@uaa.edu.mx)  
-💼 [linkedin.com/in/your_user](https://linkedin.com/)  
-
 ---
 
 ⭐ if this helped you understand RISC-V or CPU design, star it. it means someone besides me found it useful.
